@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGU LIBRARY - Admin Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+<header>
+<h1>AGU LIBRARY ADMIN</h1>
+<a href="index.html" class="btn">Home</a>
+</header>
+
+<section>
+
+<h2>Upload New File</h2>
+
+<form id="uploadForm">
+
+<input
+type="text"
+id="title"
+placeholder="File Title"
+required>
+
+<br><br>
+
+<select id="category">
+
+<option value="ebook">eBook</option>
+
+<option value="image">Image</option>
+
+<option value="video">Video</option>
+
+<option value="document">Document</option>
+
+</select>
+
+<br><br>
+
+<input
+type="file"
+id="file"
+required>
+
+<br><br>
+
+<button
+class="btn"
+type="submit">
+
+Upload File
+
+</button>
+
+</form>
+
+</section>
+
+<section>
+
+<h2>Uploaded Files</h2>
+
+<div id="adminFiles">
+
+Loading...
+
+</div>
+
+</section>
+
+<script src="js/supabase.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+</html>
