@@ -68,10 +68,16 @@ location.reload();
 
 async function loadFiles(){
 
-const { data } = await supabase
+const { data, error } = await supabase
 .from(TABLE)
 .select("*")
-.order("created_at",{ascending:false});
+.order("created_at", { ascending: false });
+
+if (error) {
+alert(error.message);
+return;
+}
+
 
 const div = document.getElementById("adminFiles");
 
@@ -82,9 +88,11 @@ data.forEach(file=>{
 div.innerHTML += `
 <div class="card">
 
-<h3>$`{file.name}</h3>
+<h3>${file.name}</h3>
 
-<p>`${file.category}</p>
+<p>${file.category}</p>
+
+
 
 <a href="${file.url}" target="_blank" class="btn">
 
