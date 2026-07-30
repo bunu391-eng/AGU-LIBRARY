@@ -1,10 +1,5 @@
-// =============================
-// AGU LIBRARY - SUPABASE CONFIG
-// =============================
-
 const SUPABASE_URL = "https://mhzzvhuyyjssgejtttkf.supabase.co";
-
-const SUPABASE_KEY = "sb_publishable_8LqYL8gJjbO1lmilUldIKw_QgQAGipY";
+const SUPABASE_KEY = "YOUR_PUBLISHABLE_KEY";
 
 const supabase = window.supabase.createClient(
   SUPABASE_URL,
@@ -12,5 +7,6 @@ const supabase = window.supabase.createClient(
 );
 
 const BUCKET = "AGU LIBRARY";
-
 const TABLE = "media";
+
+console.log("Supabase loaded successfully");
